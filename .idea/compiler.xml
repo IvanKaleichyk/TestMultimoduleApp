@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="TestMultimoduleApp.app" target="1.8" />
+      <module name="TestMultimoduleApp.core-annotation" target="1.8" />
+      <module name="TestMultimoduleApp.core-db" target="1.8" />
+      <module name="TestMultimoduleApp.core-viewModelFactory" target="1.8" />
+      <module name="TestMultimoduleApp.feature-buy-api" target="1.8" />
+      <module name="TestMultimoduleApp.feature-buy-impl" target="1.8" />
+      <module name="TestMultimoduleApp.feature-clothes" target="1.8" />
+      <module name="TestMultimoduleApp.feature-likes" target="1.8" />
+      <module name="TestMultimoduleApp.module-injector" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

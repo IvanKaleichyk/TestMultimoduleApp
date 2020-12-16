@@ -1,0 +1,10 @@
+include ':core-annotation'
+include ':data'
+include ':module-injector'
+include ':feature-buy-impl'
+include ':feature-buy-api'
+include ':core-db'
+include ':feature-likes'
+include ':feature-clothes'
+include ':app'
+rootProject.name = "TestMultimoduleApp"
