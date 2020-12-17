@@ -20,6 +20,7 @@
             <option value="$PROJECT_DIR$/feature-clothes" />
             <option value="$PROJECT_DIR$/feature-likes" />
             <option value="$PROJECT_DIR$/module-injector" />
+            <option value="$PROJECT_DIR$/starter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,10 +1,16 @@
 package com.koleychik.testmultimoduleapp
 
 import androidx.navigation.NavController
-import com.koleychik.feature_clothes.ClothesNavigator
+import com.koleychik.feature_clothes.ClothesFeatureApi
+import com.koleychik.feature_clothes.navigation.ClothesNavigator
 import javax.inject.Inject
+import javax.inject.Provider
+import javax.inject.Singleton
 
-internal class Navigator @Inject constructor() : ClothesNavigator {
+@Singleton
+class Navigator @Inject constructor(
+    private val clothesFeatureApi: Provider<ClothesFeatureApi>
+) : ClothesNavigator, MainStarter {
 
     private var navController: NavController? = null
 
@@ -21,4 +27,8 @@ internal class Navigator @Inject constructor() : ClothesNavigator {
             navController?.navigate(R.id.action_clothesFragment_to_likesFragment)
     }
 
+    override fun goToClothesFeature() {
+        clothesFeatureApi.get().navigator()
+        navController?.navigate(R.id.clothesFragment)
+    }
 }

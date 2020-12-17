@@ -11,6 +11,7 @@
       <module name="TestMultimoduleApp.feature-clothes" target="1.8" />
       <module name="TestMultimoduleApp.feature-likes" target="1.8" />
       <module name="TestMultimoduleApp.module-injector" target="1.8" />
+      <module name="TestMultimoduleApp.starter" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
