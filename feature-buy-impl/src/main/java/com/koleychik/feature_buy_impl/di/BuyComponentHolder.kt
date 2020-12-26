@@ -1,6 +1,5 @@
 package com.koleychik.feature_buy_impl.di
 
-import android.content.Context
 import com.koleychik.feature_buy_api.BuyFeatureApi
 import com.koleychik.module_injector.ComponentHolder
 

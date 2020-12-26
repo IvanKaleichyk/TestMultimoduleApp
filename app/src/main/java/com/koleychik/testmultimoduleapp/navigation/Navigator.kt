@@ -37,11 +37,9 @@ class Navigator @Inject constructor(
 
     override fun goToLikes() {
         Log.d("MAIN_APP", "start go to goToLikes")
-//        Log.d("MAIN_APP", navController?.currentDestination?.displayName!!)
         if (navController == null) Log.d("MAIN_APP", "navController == null")
 
         if (navController?.currentDestination?.id == R.id.clothesFragment) {
-//            listLastComponentHolder.add(Like)
             ClothesFeatureComponentHolder.reset()
             navController?.navigate(R.id.action_clothesFragment_to_likesFragment)
         } else Log.d("MAIN_APP", "current destination is not equals")
