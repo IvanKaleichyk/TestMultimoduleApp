@@ -1,12 +1,8 @@
 package com.koleychik.module_injector
 
-interface ComponentHolder<A : BaseApi, D : BaseDependencies> : BaseComponentHolder {
+interface ComponentHolder<A : BaseApi, D : BaseDependencies>{
     fun init(dependency: D)
     fun get(): A
-
-}
-
-interface BaseComponentHolder {
     fun reset()
 }
 

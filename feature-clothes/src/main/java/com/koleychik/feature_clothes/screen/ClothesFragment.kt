@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.koleychik.feature_clothes.R
 import com.koleychik.feature_clothes.di.ClothesFeatureComponentHolder
 import com.koleychik.feature_clothes.navigation.ClothesNavigator
+import com.koleychik.feature_clothes.navigation.ClothesNavigatorComponent
 import com.koleychik.feature_clothes.viewModelFactories.ClothesViewModelFactory
 import javax.inject.Inject
 
@@ -18,9 +19,6 @@ class ClothesFragment : Fragment(R.layout.fragment_clothes) {
     @Inject
     internal lateinit var viewModelFactory: ClothesViewModelFactory
 
-//    @Inject
-//    lateinit var navigator: ClothesNavigator
-
     @Inject
     lateinit var navigator: ClothesNavigator
 
@@ -28,14 +26,11 @@ class ClothesFragment : Fragment(R.layout.fragment_clothes) {
         ViewModelProvider(this, viewModelFactory)[ClothesViewModel::class.java]
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val component = ClothesFeatureComponentHolder.getComponent()
-        component.inject(this)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val component = ClothesFeatureComponentHolder.getComponent()
+        component.inject(this)
 
         val text: TextView = requireView().findViewById(R.id.text)
         val price: TextView = requireView().findViewById(R.id.price)
@@ -49,24 +44,20 @@ class ClothesFragment : Fragment(R.layout.fragment_clothes) {
                 price.text = it.price.toString()
             }
         })
-//        viewModel.component.observe(viewLifecycleOwner, {
-//            if (it == null)
-//        })
 
         btn.setOnClickListener {
             viewModel.buy(viewModel.model.value!!)
         }
 
         btnGoToLikes.setOnClickListener {
-//            ClothesFeatureComponentHolder.reset()
             Log.d("MAIN_APP", "btnGoToLikes click")
             navigator.goToLikes()
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-//        ClothesNavigatorComponent.reset()
-//        ClothesFeatureComponentHolder.reset()
+    override fun onStop() {
+        super.onStop()
+        ClothesNavigatorComponent.reset()
+        ClothesFeatureComponentHolder.reset()
     }
 }
