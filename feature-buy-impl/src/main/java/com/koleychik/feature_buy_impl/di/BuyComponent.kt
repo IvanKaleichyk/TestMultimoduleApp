@@ -1,5 +1,6 @@
 package com.koleychik.feature_buy_impl.di
 
+import android.content.Context
 import com.koleychik.core_annotation.general.PerFeature
 import com.koleychik.feature_buy_api.BuyFeatureApi
 import dagger.Component
@@ -13,7 +14,10 @@ interface BuyComponent : BuyFeatureApi {
 
     companion object {
         fun initAndGet(dependencies: BuyFeatureDependencies): BuyComponent =
-            DaggerBuyComponent.builder().buyFeatureDependencies(dependencies).build()
+            DaggerBuyComponent.builder()
+                .buyFeatureDependencies(dependencies)
+//                .bu
+                .build()
     }
 
 }

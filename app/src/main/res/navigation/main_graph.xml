@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/clothesFragment">
 
     <fragment
         android:id="@+id/clothesFragment"
         android:name="com.koleychik.feature_clothes.screen.ClothesFragment"
-        android:label="ClothesFragment" >
+        android:label="ClothesFragment">
         <action
             android:id="@+id/action_clothesFragment_to_likesFragment"
             app:destination="@id/likesFragment" />

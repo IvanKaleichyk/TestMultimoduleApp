@@ -6,8 +6,8 @@ import com.koleychik.data.MainModel
 import com.koleychik.feature_buy_api.BuyRepository
 import javax.inject.Inject
 
-internal class BuyRepositoryImpl @Inject constructor(): BuyRepository {
+internal class BuyRepositoryImpl @Inject constructor(private val context: Context) : BuyRepository {
     override fun buy(model: MainModel) {
-//        Toast.makeText(context, "Model was bought!!!", Toast.LENGTH_LONG).show()
+        Toast.makeText(context, "Model was bought!!!", Toast.LENGTH_LONG).show()
     }
 }

@@ -8,6 +8,7 @@ import dagger.Module
 
 @Module
 internal abstract class BuyModule {
+
     @Binds
     @PerFeature
     abstract fun provideRepository(repositoryImpl: BuyRepositoryImpl): BuyRepository

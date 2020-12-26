@@ -3,8 +3,7 @@ package com.koleychik.feature_clothes.di
 import com.koleychik.feature_clothes.ClothesFeatureApi
 import com.koleychik.module_injector.ComponentHolder
 
-object ClothesFeatureComponentHolder :
-    ComponentHolder<ClothesFeatureApi, ClothesFeatureDependencies> {
+object ClothesFeatureComponentHolder : ComponentHolder<ClothesFeatureApi, ClothesFeatureDependencies> {
 
     private var clothesFeatureComponent: ClothesFeatureComponent? = null
 

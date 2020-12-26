@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/core-annotation" />
             <option value="$PROJECT_DIR$/core-db" />
+            <option value="$PROJECT_DIR$/core-utils" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/feature-buy-api" />
             <option value="$PROJECT_DIR$/feature-buy-impl" />
